@@ -1,0 +1,79 @@
+html {
+	background-color: #004b84;
+	font-family: 'Poppins', sans-serif;
+}
+
+/**
+Each tile's image height is known in advance.  at archive.org we use backend (PHP) to fetch that height and then simply have to run a formula like this for picking which 'htX' class to use:
+  'ht' . min(7, floor($imgHT / 40));
+
+We assume 20px gutters, and we _also_ split our grid into 20px high row increments (minimum here is 2 row spans per tile).
+
+So,
+a 'row span' of 2 is  60px high,
+a 'row span' of 3 is 100px high, etc.
+ */
+.results {
+	/* fit in up to 5 columns of 180px wide tiles, 20px gutters: 5*180 + 4*20: */
+	max-width: 900px;
+	margin: 0 auto;
+	display: grid;
+	grid-gap: 20px;
+	/* fit as many columns as possible, 180px wide each: */
+	grid-template-columns: repeat(auto-fill, 180px);
+	/* each row is 20px high -- we always span 2+ */
+	grid-auto-rows: minmax(20px, auto);
+	justify-content: center;	
+	border-radius: 15px;
+	text-align: center;
+}
+
+.results > * {
+	width: 180px;
+	/* only for older non-grid browsers: */
+	float: left;  
+	/* only for older non-grid browsers: */
+	margin: 15px;
+	}
+
+.ht0 { grid-row-end: span 2; background-color: #fdb9b9; border-radius: 15px;}
+.ht1 { grid-row-end: span 3; background-color: #e5fdba; border-radius: 15px;}
+.ht2 { grid-row-end: span 4; background-color: #c0defe; border-radius: 15px;}
+.ht3 { grid-row-end: span 5; background-color: #fcb9fd; border-radius: 15px;}
+.ht4 { grid-row-end: span 6; background-color: #cebafd; border-radius: 15px;}
+.ht5 { grid-row-end: span 7; background-color: #baf5fd; border-radius: 15px;}
+.ht6 { grid-row-end: span 8; background-color: #fcfdba; border-radius: 15px;}
+.ht7 { grid-row-end: span 9; background-color: #ff9494; border-radius: 15px;}
+
+@supports (display: grid) {
+  .results > * {
+    /* modern browser -- grid-gap takes care of us: */
+    margin: 0 auto;
+  }
+}
+
+/* cosmetics only from here on down */
+
+.results > * img {
+  max-width: 100%;
+}
+.results > * span {
+  font-size: 125%;
+  color: #cc3333;
+  font-family: 'Ultra';
+}
+
+/* Add this style to your existing CSS */
+a {
+    color: black; /* Set the text color to white */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* You can add other styles for different states like hover, active, and visited if needed */
+a:hover {
+    text-decoration: underline; /* Add underline on hover if desired */
+}
+
+h1{
+	color: white;
+}

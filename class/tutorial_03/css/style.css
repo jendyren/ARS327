@@ -1,0 +1,41 @@
+body {
+    background-color: #004b84;
+    font-family: Arial, sans-serif;
+    margin: 20px; /* Add 20px margin from all sides */
+    padding: 0;
+    color: white;
+    display: flex; /* Enable flexbox for centering */
+    height: 100vh; /* Make the body at least 100% of the viewport height */
+	justify-content: center; 
+	text-align: center; 
+}
+
+.content{
+	width: 900px;
+	margin: auto auto;
+
+}
+
+h1 {
+    color: white;
+	justify-content: center; 
+	text-align: center; 
+}
+
+h2 {
+    color: yellow;
+	justify-content: center; 
+	text-align: center; 
+	
+}
+
+/* Add this style to your existing CSS */
+a {
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+/* You can add other styles for different states like hover, active, and visited if needed */
+a:hover {
+    text-decoration: underline; /* Add underline on hover if desired */
+}

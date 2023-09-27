@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Data about website -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>tutorial 04</title>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="../../script/global.js"></script>  
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="game-container">
+                <h1>Harmony</h1>
+                <p id="intro-text" style="justify-content:space-around; text-align: left;">
+                    With resolve in your heart, you accept Gourmando's quest. He hands you the Magical Recipe Book and explains that you need to gather the following ingredients to create the dish:
+                </p>
+                <a href="#">
+                    <button id="open-apple-button">
+                        Apples from Apple Wolves
+                    </button>
+                </a>
+                <a href="#">
+                    <button id="open-pineapple-button">
+                        Pineapple from Pinedeers
+                    </button>
+                </a>
+                <a href="#">
+                    <button id="open-honey-button">
+                        Honey from Sunflower Bees
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="appleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Apple from the Apple Wolves</h2>
+            <p>
+                To obtain this magical apple, adventurers must navigate the Enchanted Orchard, a mystical forest inhabited by the elusive Apple Wolves. These creatures guard the trees bearing apples with a sweet and enchanting flavor.
+            </p>
+            <a href="../apple/enchanted_orchard.html">
+                <button id="apple-modal-button">
+                    Enter enchanted orchard
+                </button>
+            </a>
+        </div>
+    </div>  
+    <div id="pineappleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Pineapple from Pinedeers</h2>
+            <p>
+                To obtain the pineapple, you must venture into the Cloudcrest Mountains, where the graceful Pinedeers roam. Their antlers are adorned with ripe pineapples instead of leaves.
+            </p>
+            <a href="../pineapple/cloudcrest_mountains.html">
+                <button id="pineapple-modal-button">
+                    Venture into Cloudcrest Mountains
+                </button>
+            </a>
+        </div>
+    </div>  
+    <div id="honeyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sunbeam Honey from Sunflower Bees</h2>
+            <p>
+                To acquire the elusive Sunbeam Honey, you must journey to the Sunlit Meadow, a radiant and mystical place where the Sunflower Bees produce this golden nectar. Their hives are high among the sunflowers.            
+            </p>
+            <a href="../honey/sunlit_meadows.html">
+                <button id="honey-modal-button">
+                    Approach Sunlit Meadow
+                </button>
+            </a>
+        </div>
+    </div>  
+    <script src="../../script/apple_modal.js"></script>  
+    <script src="../../script/pineapple_modal.js"></script>  
+    <script src="../../script/honey_modal.js"></script>  
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+html {
+	background-color: #004b84;
+	font-family: 'Poppins', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	font-size: 22px;
+	color: white;
+}
+
+.container {
+  padding: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 470px;
+  display: flex;
+  flex-flow: column wrap; /* Shorthand – you could use ‘flex-direction: column’ and ‘flex-wrap: wrap’ instead */
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.item {
+  border-radius: 15px;
+  background-color: orange;
+  height: 150px;
+  width: 31%;
+  margin: 1%;
+  padding: 10px;
+}
+
+.item:nth-child(2) {
+  background-color: #fec0cb;
+  height: 250px;
+}
+
+.item:nth-child(3) {
+  height: 190px;
+}
+
+.item:nth-child(4) {
+  background-color: aqua;
+  height: 220px;
+}
