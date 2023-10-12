@@ -14,7 +14,7 @@ pineappleModal.addEventListener("click", function(event) {
     }
 });
 
-// You can also close the pineappleModal with the escape key
+// Close the pineappleModal with the escape key
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape" && pineappleModal.style.display === "block") {
         pineappleModal.style.display = "none";

@@ -14,7 +14,7 @@ appleModal.addEventListener("click", function(event) {
     }
 });
 
-// You can also close the appleModal with the escape key
+// Close the appleModal with the escape key
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape" && appleModal.style.display === "block") {
         appleModal.style.display = "none";

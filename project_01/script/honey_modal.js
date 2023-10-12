@@ -14,7 +14,7 @@ honeyModal.addEventListener("click", function(event) {
     }
 });
 
-// You can also close the honeyModal with the escape key
+// Close the honeyModal with the escape key
 document.addEventListener("keydown", function(event) {
     if (event.key === "Escape" && honeyModal.style.display === "block") {
         honeyModal.style.display = "none";

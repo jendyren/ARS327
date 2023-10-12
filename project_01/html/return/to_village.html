@@ -20,6 +20,7 @@
         <div id="content">
             <div id="game-container">
                 <h1>Return to Harmony</h1>
+                <img id="game-image" src="../../images/Bowl_1.png" alt="Game Image">
                 <p id="game-text" style="justify-content:space-around; text-align: left;">
                     
                 </p>
@@ -39,15 +40,27 @@
         // Function to update game text based on the number of ingredients
         function updateGameText() {
             const gameTextElement = document.getElementById("game-text");
+            const gameImageElement = document.getElementById("game-image");
+            var text = "";
+            var imageSrc = "";
             if (num_collected === 3) {
-                gameTextElement.textContent = "Ingredients in hand, you make your way back to the village, where Gourmando eagerly awaits in the kitchen. He examines the apple, pineapple, and honey you gathered, nodding approvingly. 'Excellent! We can now cook the Dish of Empowerment for Bob,' he declares.Gourmando combines the ingredients, filling the kitchen with an enchanting aroma. As the fruit melds into a syrupy glaze, you know your journey nears its end.";
+                text = "Ingredients in hand, you make your way back to the village, where Gourmando eagerly awaits in the kitchen. He examines the apple, pineapple, and honey you gathered, nodding approvingly. 'Excellent! We can now cook the Dish of Empowerment for Bob,' he declares.Gourmando combines the ingredients, filling the kitchen with an enchanting aroma. As the fruit melds into a syrupy glaze, you know your journey nears its end.";
+                imageSrc = "../../images/Bowl_3.png";
             } else if (num_collected === 2) {
-                gameTextElement.textContent = "You return to Harmony with just two of the precious ingredients Gourmando smiles, but his eyes show concern. 'This will have to do,' he says solemnly. He works his magic to prepare a version of the Dish of Empowerment, but you both know it lacks the full potency to boost Bob's power. As the scent of sweet syrup fills the kitchens, you hope the dish will be enough for Bob to prevail.";
+                text = "You return to Harmony with just two of the precious ingredients Gourmando smiles, but his eyes show concern. 'This will have to do,' he says solemnly. He works his magic to prepare a version of the Dish of Empowerment, but you both know it lacks the full potency to boost Bob's power. As the scent of sweet syrup fills the kitchens, you hope the dish will be enough for Bob to prevail.";
+                imageSrc = "../../images/Bowl_2.png";
+                
             } else if (num_collected === 1) {
-                gameTextElement.textContent = "You shamefully produce the lone ingredient retrieved from your journey. Gourmando shakes his head sadly. 'I can only make a meager dish with this,' he says. He tries his best, but the result is a weak gruel. As Bob consumes it dutifully, you feel the dread of the coming battle settle upon the village.";
+                text = "You shamefully produce the lone ingredient retrieved from your journey. Gourmando shakes his head sadly. 'I can only make a meager dish with this,' he says. He tries his best, but the result is a weak gruel. You feel the dread of the coming battle settle upon the village.";
+                imageSrc = "../../images/Bowl_1.png";
+                
             } else if (num_collected === 0) {
-                gameTextElement.textContent = "Your satchel empty, you lower your head in failure as you walk through the village. Crestfallen, Gourmando can only pat your shoulder in somber resignation. 'Then our fate is sealed,' he says softly. Without any dish to aid Bob, the village prepares mournfully for the Devourer's coming onslaught. They place their hopes now in miracles alone.";
+                text = "Your satchel empty, you lower your head in failure as you walk through the village. Crestfallen, Gourmando can only pat your shoulder in somber resignation. 'Then our fate is sealed,' he says softly. Without any dish to aid Bob, the village prepares mournfully for the Devourer's coming onslaught.";
+                imageSrc = "../../images/Bowl_0.png";
+                
             }
+            gameTextElement.textContent = text;
+            gameImageElement.src = imageSrc; // Update the image source
         }
 
         // Update the game text

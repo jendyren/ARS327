@@ -5,7 +5,7 @@ body {
 }
 
 #wrapper {
-	width: 70%;
+	width: 50%;
 	margin: auto;
 	padding: 15px;
 	background-color: white;
@@ -30,7 +30,7 @@ h2 {
 
 a {
 	display: inline-block;
-	width: 15%;
+	/* width: 15%; */
 	text-align: center;
 	text-decoration: none;
 	line-height: 80px;
@@ -53,12 +53,12 @@ button {
 }
   
 /* Hover State */
-.button:hover {
+button:hover {
 	background-color: #2980b9;
 }
 
 /* Active State (when clicked) */
-.button:active {
+button:active {
 	background-color: #1c6ca3;
 }
   
@@ -77,10 +77,10 @@ button {
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%;
+    width: 55%;
 }
 
 /* Close Button */
