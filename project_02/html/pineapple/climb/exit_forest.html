@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Data about website -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>tutorial 04</title>
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="game-container">
+                <h1>Cloudcrest Mountains</h1>
+                <img src="../../../images/PineForest.png" alt="pinedeer">
+                <p id="intro-text" style="justify-content:space-around; text-align: left;">
+                    By digging gear into the trees, you've trespassed without care in the Pinedeer's realm. Not all approaches will be tolerated here. To obtain a pineapple, you must search for balance through respect and wisdom.                </p>
+                <a href="../../recipe_book.html">
+                    <button id="choice-1">
+                        Open recipe book
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // To update a variable, for example:
+        localStorage.setItem('collectedPineapple', false);
+        // To update a variable, for example:
+        localStorage.setItem('pineapplePathComplete', true);
+        // To retrieve a variable, for example:
+        console.log("collected_pineapple:", localStorage.getItem('collectedPineapple'))
+    </script>
+</body>
+
+</html>

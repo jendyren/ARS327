@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Data about website -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>tutorial 04</title>
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="game-container">
+                <h1>Return to Harmony</h1>
+                <img src="../../images/fight.png" alt="fight">
+                <p id="game-text" style="justify-content:space-around; text-align: left;">
+                    
+                </p>
+                <a href="./end.html">
+                    <button id="choice-1">
+                        End
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Retrieve the collected variables from local storage
+        var num_collected = JSON.parse(localStorage.getItem('num_collected'));
+        console.log("num_collected: ", num_collected)
+
+        // Function to update game text based on the number of ingredients
+        function updateGameText() {
+            const gameTextElement = document.getElementById("game-text");
+            if (num_collected === 3) {
+                gameTextElement.textContent = "You present Bob with the complete magical dish, overflowing with ripe fruit and sweet honey. Infused with the full essence of the land and sea, Bob consumes the meal and feels his elemental magic surge with rejuvenating power. Thus fortified, he defeats the Devourer decisively when it attacks.";
+            } else if (num_collected === 2) {
+                gameTextElement.textContent = "You feed Bob the partial dish, weakened without all the ingredients. Bob consumes the meal, and some measure of his strength returns. When the Devourer strikes, Bob battles fiercely but the clash remains perilously close. Though victorious this time, Bob's magic needs further replenishing.";
+            } else if (num_collected === 1) {
+                gameTextElement.textContent = "Presenting the lone ingredient, what little magic Bob can extract fortifies him, if only slightly. The Devourer nearly overwhelms him, but ultimately Bob prevails, though the village suffers damage in the battle. Clearly, more must be done to empower Bob against future threats.";
+            } else if (num_collected === 0) {
+                gameTextElement.textContent = "With heaviness in your heart, you go to Bob with empty hands. When the Devourer attacks, Bob battles valiantly but is quickly overpowered. As Bob collapses and the village is ravaged, you know bitter failure, resolving to seek the ingredients earnestly to save Harmony.";
+            }
+        }
+
+        // Update the game text
+        updateGameText();
+    </script>
+
+</body>
+
+</html>
