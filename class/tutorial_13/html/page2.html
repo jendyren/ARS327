@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Data about website -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>tutorial 13</title>
+	<link href="/class/tutorial_13/css/style.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+
+    <script>
+        window.onload = function(){
+            //get parameters from url
+            var params = new URLSearchParams(window.location.search);
+            console.log(JSON.parse(params.get("name")))
+
+            //extract data from parameters object
+            var n = JSON.parse(params.get("name"));
+
+            //place data into page
+            document.getElementById("output").innerHTML = "Hello " + n;
+        }
+    </script>
+</head>
+
+<body>
+	<div id="wrapper">  
+        <h1 id="output"></h1>
+        
+	</div>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'FairfaxStationNF';
-    src: url('../fonts/chanticleerroman/ChanticleerRomanNF.otf') format('opentype');
+    src: url('fonts/chanticleerroman/ChanticleerRomanNF.otf') format('opentype');
     /* You can add additional source URLs for other formats here */
 }
 

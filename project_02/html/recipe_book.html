@@ -5,7 +5,7 @@
     <!-- Data about website -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>tutorial 04</title>
+    <title>Harmony</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +17,11 @@
         <div id="content">
             <div id="game-container">
                 <h1>Harmony</h1>
-                <div id="ingredientsCollected">
-                    <img id="apple-collected-img" src="../images/Apple.png" alt="apple-collected" class="hidden">
-                </div>
                 <div id="in-progress">
                     <p id="intro-text" style="justify-content:space-around; text-align: left;">
                         It's time to retrieve the next ingredient. Where do you want to go?
+                    </p>
+                    <p>
                         Press I to check your inventory.
                     </p>
     
@@ -42,6 +41,8 @@
                 <div id="completed" style="display: none;">
                     <p id="intro-text" style="justify-content:space-around; text-align: left;">
                         You have completed your journey! Return to Gourmando to make your dish with the items you've gathered.
+                    </p>
+                    <p>
                         Press I to check your inventory.
                     </p>
     
@@ -103,9 +104,11 @@
         <div class="modal-content" style="text-align: center;">
             <span class="close">&times;</span>
             <h2>Ingredients collected so far...</h2>
-            <img id="apple-image" src="" alt="apple image" class="hidden">
-            <img id="pineapple-image" src="" alt="pineapple image" class="hidden">
-            <img id="honey-image" src="" alt="honey image" class="hidden">
+            <div style="display: flex; justify-content: center;">
+                <img id="apple-image" src="" alt="apple image" class="hidden">
+                <img id="pineapple-image" src="" alt="pineapple image" class="hidden">
+                <img id="honey-image" src="" alt="honey image" class="hidden">
+            </div>
         </div>
     </div>  
     <script src="../script/updateUI.js"></script>
