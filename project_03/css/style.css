@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "FairfaxStationNF";
+  src: url("../fonts/chanticleerroman/ChanticleerRomanNF.otf")
+    format("opentype");
+  /* You can add additional source URLs for other formats here */
+}
+
+body {
+  background-color: #fefcf3;
+  margin: 0;
+  /* font-family: Poppins; */
+  font-family: "FairfaxStationNF", sans-serif;
+  font-size: 1.7em;
+  color: #3f2010;
+}
+
+#wrapper {
+  width: 50%;
+  margin: auto;
+  padding: 100px;
+  background-color: #fefcf3;
+  justify-content: center;
+  text-align: center;
+}
+
+#nav {
+  width: 100%;
+  height: 80px;
+  background-color: #69b4e2;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  display: inline-block;
+  /* width: 15%; */
+  text-align: center;
+  text-decoration: none;
+  line-height: 80px;
+  color: black;
+}
+
+/* Basic Button Styling */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  /* background-color: #895639; */
+  background-color: #74433d;
+  color: #ffffff;
+  font-family: "FairfaxStationNF", sans-serif;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover State */
+button:hover {
+  background-color: #4c2a26;
+}
+
+/* Active State (when clicked) */
+button:active {
+  background-color: #74433d;
+}
+
+/* The Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 55%;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CSS to hide the image by default */
+.hidden {
+  display: none;
+}
+
+.storm-container {
+  overflow: hidden;
+}
+
+.moving-storm {
+  animation: moveCloud 10s linear infinite;
+}
+
+@keyframes moveCloud {
+  0%,
+  100% {
+    transform: translateX(-50);
+  }
+  50% {
+    transform: translateX(80%); /* Adjust the distance the cloud moves */
+  }
+}
+
+#ingredientsContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 75px;
+  min-height: 200px;
+}
+
+.floating-image {
+  animation: floatAnimation 3s infinite ease-in-out;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the distance the images float */
+  }
+}

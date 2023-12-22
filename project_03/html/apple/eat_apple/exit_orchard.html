@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Data about website -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Harmony</title>
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="game-container">
+                <h1>Enchanted Orchard</h1>
+                <img src="../../../images/Apple.png" alt="apple">
+                <p id="intro-text" style="justify-content:space-around; text-align: left;">
+                    Relieved, you pick up the apple and hastily make your way out of the orchard before the Wolves change their minds. You reflect on the importance of respecting nature's guardians.
+                </p>
+                <a href="../../recipe_book.html">
+                    <button id="choice-1">Open recipe book</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // To update a variable, for example:
+        localStorage.setItem('collectedApple', true);
+        // To update a variable, for example:
+        localStorage.setItem('applePathComplete', true);
+        // To retrieve a variable, for example:
+        console.log("collected_apple:", localStorage.getItem('collectedApple'))
+    </script>
+</body>
+
+</html>

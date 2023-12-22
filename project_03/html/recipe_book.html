@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Data about website -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Harmony</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <div id="game-container">
+                <h1>Harmony</h1>
+                <div id="in-progress">
+                    <p id="intro-text" style="justify-content:space-around; text-align: left;">
+                        It's time to retrieve the next ingredient. Where do you want to go?
+                    </p>
+                    <p>
+                        Press I to check your inventory.
+                    </p>
+    
+                    <button id="open-apple-button">
+                        Apples from Apple Wolves
+                    </button>
+                
+                    <button id="open-pineapple-button">
+                        Pineapple from Pinedeers
+                    </button>
+                
+                    <button id="open-honey-button">
+                        Honey from Sunflower Bees
+                    </button>
+                    
+                </div>
+                <div id="completed" style="display: none;">
+                    <p id="intro-text" style="justify-content:space-around; text-align: left;">
+                        You have completed your journey! Return to Gourmando to make your dish with the items you've gathered.
+                    </p>
+                    <p>
+                        Press I to check your inventory.
+                    </p>
+    
+                    <a href="../html/return/to_village.html">
+                        <button id="return-to-village-button" style="display: none;">
+                          Return to village
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="appleModal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <span class="close">&times;</span>
+            <h2>Apple from the Apple Wolves</h2>
+            <img src="../images/AppleWolf.png" alt="apple_wolf" style="width:300px">
+            <p style="text-align: left;">
+                To obtain this magical apple, adventurers must navigate the Enchanted Orchard, a mystical forest inhabited by the elusive Apple Wolves. These creatures guard the trees bearing apples with a sweet and enchanting flavor.
+            </p>
+            <a href="../html/apple/enchanted_orchard.html">
+                <button id="apple-modal-button">
+                    Enter enchanted orchard
+                </button>
+            </a>
+        </div>
+    </div>  
+    <div id="pineappleModal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <span class="close">&times;</span>
+            <h2>Pineapple from Pinedeers</h2>
+            <img src="../images/Pinedeer.png" alt="pinedeer" style="width:300px">
+            <p style="text-align: left;">
+                To obtain the pineapple, you must venture into the Cloudcrest Mountains, where the graceful Pinedeers roam. Their antlers are adorned with ripe pineapples instead of leaves.
+            </p>
+            <a href="../html/pineapple/cloudcrest_mountains.html">
+                <button id="pineapple-modal-button">
+                    Venture into Cloudcrest Mountains
+                </button>
+            </a>
+        </div>
+    </div>  
+    <div id="honeyModal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <span class="close">&times;</span>
+            <h2>Sunbeam Honey from Sunflower Bees</h2>
+            <img src="../images/Bees.png" alt="pinedeer" style="width:300px">
+            <p style="text-align: left;">
+                To acquire the elusive Sunbeam Honey, you must journey to the Sunlit Meadow, a radiant and mystical place where the Sunflower Bees produce this golden nectar. Their hives are high among the sunflowers.            
+            </p>
+            <a href="../html/honey/sunlit_meadows.html">
+                <button id="honey-modal-button">
+                    Approach Sunlit Meadow
+                </button>
+            </a>
+        </div>
+    </div> 
+    <div id="inventoryModal" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <span class="close">&times;</span>
+            <h2>Ingredients collected so far...</h2>
+            <div style="display: flex; justify-content: center;">
+                <img id="apple-image" src="" alt="apple image" class="hidden">
+                <img id="pineapple-image" src="" alt="pineapple image" class="hidden">
+                <img id="honey-image" src="" alt="honey image" class="hidden">
+            </div>
+        </div>
+    </div>  
+    <script src="../script/updateUI.js"></script>
+    <script src="../script/inventory_modal.js"></script>
+    <script src="../script/apple_modal.js"></script>
+    <script src="../script/pineapple_modal.js"></script>
+    <script src="../script/honey_modal.js"></script>
+</body>
+</html>
